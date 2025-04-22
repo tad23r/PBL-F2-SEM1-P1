@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Select Level - GeoShift</title>
+  <link rel="stylesheet" href="play.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="stars-background">
+    <div class="stars"></div>
+    <div class="stars2"></div>
+    <div class="stars3"></div>
+  </div>
+  
+  <div class="levels-container">
+    
+    <div class="level-grid">
+      <!-- Levels 1 to 10 -->
+      <button class="level-btn current" onclick="startLevel(1)">1</button>
+      <button class="level-btn current" onclick="startLevel(2)">2</button>
+      <button class="level-btn current" onclick="startLevel(3)">3</button>
+      <button class="level-btn locked" onclick="startLevel(4)">4</button>
+      <button class="level-btn locked" onclick="startLevel(5)">5</button>
+      <button class="level-btn locked" onclick="startLevel(6)">6</button>
+      <button class="level-btn locked" onclick="startLevel(7)">7</button>
+      <button class="level-btn locked" onclick="startLevel(8)">8</button>
+      <button class="level-btn locked" onclick="startLevel(9)">9</button>
+      <button class="level-btn locked" onclick="startLevel(10)">10</button>
+    </div>
+    
+    <div class="level-footer">
+      <button class="back-button glow-btn" onclick="goBack()">
+        <span class="icon">←</span> Back to Home
+      </button>
+    </div>
+  </div>
+
+  <script>
+    function startLevel(level) {
+      if (!event.target.classList.contains('locked')) {
+        window.location.href = `level${level}.html`;
+      } else {
+        alert("Complete previous levels to unlock this one!");
+      }
+    }
+
+    function goBack() {
+      window.location.href = "play.html";
+    }
+  </script>
+</body>
+</html>

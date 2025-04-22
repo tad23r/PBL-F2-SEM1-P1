@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoShift - Shape-Shifting Puzzle Game</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="main-header">
+        <div class="container header-container">
+            <div class="head-left">
+                <img src="img/logo.png" alt="GeoShift Logo" class="logo-img">
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="bio.html">About us</a>
+                    <a href="game.html">The Game</a>
+                </div>
+            </div>
+            <a href="play.html"><button class="play-btn">Play Now</button></a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <p class="hero-tagline">Shape-shifting puzzle adventure</p>
+                <h1 class="hero-title">GEOSHIFT</h1>
+                <p class="hero-description">"Shift your form, break free from the prison that holds you." Embark on a mind-bending journey where your ability to change shapes is the key to solving intricate puzzles and escaping impossible challenges.</p>
+                <div class="cta-buttons">
+                    <a href="play.html"><button class="play-btn">Play Now</button></a>
+                    <a href="bio.html"><button class="secondary-btn">Learn More</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <h2 class="section-title">What is GeoShift?</h2>
+            <div class="about-content">
+                <video width="320" height="240" controls>
+                    <source src="video/play.mp4" type="video/mp4">
+                  </video>
+                <div class="about-text">
+                    <p>GeoShift is an innovative puzzle game designed for players who crave intellectual challenges with fresh mechanics. Our game combines simple-to-learn but hard-to-master shape-shifting mechanics with increasingly complex puzzles that will test your spatial reasoning and problem-solving skills.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <section class="feature-section">
+            <div class="feature-container">
+                <div class="text-container">
+                    <h1 id="title">Shape-Shifting Mechanics</h1>
+                    <p id="content">Players can morph between different shapes to pass through specific barriers.</p>
+                </div>
+                <div class="image-container" onclick="switchImage()">
+                        <img src="img/feature1.png" class="image" style="background-color: blue;">
+                        <img src="img/feature2.png" class="image" style="background-color: red;">
+                        <img src="img/feature3.png" class="image" style="background-color: green;">
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section class="screenshots-section" id="screenshots">
+        <div class="container">
+            <h2 class="section-title">Game Screenshots</h2>
+            <div class="screenshots-grid">
+                <div class="screenshot-item">
+                    <img src="img/screenshot1.png" alt="Gameplay Screenshot 1">
+                </div>
+                <div class="screenshot-item">
+                    <img src="img/screenshot2.png" alt="Gameplay Screenshot 2">
+                </div>
+                <div class="screenshot-item">
+                    <img src="img/screenshot3.png" alt="Gameplay Screenshot 3">
+                </div>
+                <div class="screenshot-item">
+                    <img src="img/screenshot4.png" alt="Gameplay Screenshot 4">
+                </div>
+                <div class="screenshot-item">
+                    <img src="img/screenshot5.png" alt="Gameplay Screenshot 5">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="geoshift-footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <h3 class="footer-logo">GeoShift</h3>
+                    <p class="footer-tagline">Exploring the world through geometric transformation and innovative puzzle mechanics.</p>
+                    <div class="social-links">
+                        <a href="https://x.com" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://discord.com" class="social-link"><i class="fab fa-discord"></i></a>
+                        <a href="https://youtube.com" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links-container">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="bio.html">About us</a></li>
+                        <li><a href="game.html">The Game</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact-container">
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope contact-icon"></i>
+                            <span>hello@geoshift.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt contact-icon"></i>
+                            <span>Kuala Lumpur, Malaysia</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone contact-icon"></i>
+                            <span>+60 123-456-789</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 GeoShift. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="script.js"></script>
+</html>

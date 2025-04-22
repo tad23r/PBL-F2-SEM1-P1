@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About GeoShift</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="main-header">
+        <div class="container header-container">
+            <div class="head-left">
+                <img src="img/logo.png" alt="GeoShift Logo" class="logo-img">
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="bio.html">About us</a>
+                    <a href="game.html">The Game</a>
+                </div>
+            </div>
+            <a href="play.html"><button class="play-btn">Play Now</button></a>
+        </div>
+    </header>
+
+    <!-- About Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <h1>Behind The Game</h1>
+            <p>Meet the creative minds who transformed geometric concepts into an immersive puzzle experience. Our team combines technical expertise with artistic vision to create something truly unique.</p>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <h2 class="section-title">Development Team</h2>
+            <div class="team-container">
+                <!-- Profile Card 1 -->
+                <div class="profile-card">
+                    <div class="profile-image">
+                        <img src="img/Faqih.jpg" alt="Faqih">
+                    </div>
+                    <div class="profile-content">
+                        <div class="bio-tabs">
+                            <button class="bio-tab active" onclick="switchBio(this, 'bio1-1')">Introduction</button>
+                            <button class="bio-tab" onclick="switchBio(this, 'bio1-2')">School</button>
+                            <button class="bio-tab" onclick="switchBio(this, 'bio1-3')">Project</button>
+                        </div>
+                        <h3 class="profile-name">Faqih</h3>
+                        <p class="profile-role">Web Developer</p>
+                        
+                        <div class="bio-content active" id="bio1-1">
+                            <p>A 13 years old in DIP course that want to learn more about computer science!</p>
+                        </div>
+                        <div class="bio-content" id="bio1-2">
+                            <p>In Kolej@PERMATA Pintar Negara</p>
+                        </div>
+                        <div class="bio-content" id="bio1-3">
+                            <p>GeoShift - JavaScript Web Game</p>
+                            <p>Scratch Game Project</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Profile Card 2 -->
+                <div class="profile-card">
+                    <div class="profile-image">
+                        <img src="img/Asyraf.jpg" alt="Asyraf">
+                    </div>
+                    <div class="profile-content">
+                        <div class="bio-tabs">
+                            <button class="bio-tab active" onclick="switchBio(this, 'bio2-1')">Introduction</button>
+                            <button class="bio-tab" onclick="switchBio(this, 'bio2-2')">School</button>
+                            <button class="bio-tab" onclick="switchBio(this, 'bio2-3')">Project</button>
+                        </div>
+                        <h3 class="profile-name">Asyraf</h3>
+                        <p class="profile-role">Game Developer</p>
+                        
+                        <div class="bio-content active" id="bio2-1">
+                            <p>A normal guy with a normal life. 14 years old.</p>
+                        </div>
+                        <div class="bio-content" id="bio2-2">
+                            <p>Currently studying at Kolej@PERMATA Pintar Negara</p>
+                        </div>
+                        <div class="bio-content" id="bio2-3">
+                            <p>The Test - Scratch Animation                            </p>
+                            <p> Forest Fire - Scratch Game</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="geoshift-footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <h3 class="footer-logo">GeoShift</h3>
+                    <p class="footer-tagline">Exploring the world through geometric transformation and innovative puzzle mechanics.</p>
+                    <div class="social-links">
+                        <a href="https://x.com" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://discord.com" class="social-link"><i class="fab fa-discord"></i></a>
+                        <a href="https://youtube.com" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links-container">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="bio.html">About us</a></li>
+                        <li><a href="game.html">The Game</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact-container">
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope contact-icon"></i>
+                            <span>hello@geoshift.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt contact-icon"></i>
+                            <span>Kuala Lumpur, Malaysia</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone contact-icon"></i>
+                            <span>+60 123-456-789</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 GeoShift. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

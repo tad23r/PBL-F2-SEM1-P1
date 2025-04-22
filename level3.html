@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="play.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Level 3</title>
+    <style>
+        body { 
+  margin: 0; 
+  overflow: hidden; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh; 
+  background-color: black;
+}
+
+    /* Menu Styles */
+    .menu-wrapper {
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                z-index: 100;
+            }
+        
+        .menu-button {
+            background: rgba(30, 30, 44, 0.8);
+            border: 1px solid #6C5CE7;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .menu-icon span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 3px 0;
+            transition: all 0.3s;
+        }
+        
+        .menu-dropdown {
+            display: none;
+            flex-direction: column;
+            background: rgba(30, 30, 44, 0.9);
+            border: 1px solid #6C5CE7;
+            border-radius: 5px;
+            padding: 10px;
+            margin-top: 10px;
+            min-width: 150px;
+        }
+        
+        .menu-dropdown button {
+            background: #6C5CE7;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            margin: 5px 0;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: left;
+            transition: all 0.2s;
+        }
+        
+        .menu-dropdown button:hover {
+            background: #897DEC;
+        }
+        
+        .menu-button.active .menu-icon span:nth-child(1) {
+            transform: translateY(6px) rotate(45deg);
+        }
+        
+        .menu-button.active .menu-icon span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .menu-button.active .menu-icon span:nth-child(3) {
+            transform: translateY(-6px) rotate(-45deg);
+        }
+
+    </style>
+    </head>
+    <body>
+        <div class="menu-wrapper">
+            <button id="menu-toggle" class="menu-button">
+                <div class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            <div id="menu-dropdown" class="menu-dropdown">
+                <button id="back-menu-btn">🏠 Main Menu</button>
+            </div>
+        </div>
+
+        <div id="shapeShiftUI" style="display: none; position: absolute; top: 20%; left: 50%; transform: translateX(-50%); background-color: rgba(0, 0, 0, 0.7); padding: 20px; border-radius: 10px;">
+            <h3 style="color: white;">Choose Your Shape</h3>
+            <button id="shapeCircle" style="margin: 10px;">Circle</button>
+            <button id="shapeTriangle" style="margin: 10px;">Triangle</button>
+            <button id="shapePentagon" style="margin: 10px;">Pentagon</button>
+            <button id="shapeStar" style="margin: 10px;">Star</button>
+        </div>
+        
+        
+
+        <canvas id="gameCanvas"></canvas>
+    <script src="level3.js"></script>
+
+</body>
+</html>

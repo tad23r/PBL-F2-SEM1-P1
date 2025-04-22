@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GeoShift</title>
+  <link rel="stylesheet" href="play.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="particles-background" id="particles-js"></div>
+  <div class="home-container">
+    <div class="home-ui">
+      <div class="title-box">
+        <h1 class="game-title">GeoShift</h1>
+        <p class="subtitle">A shape-shifting puzzle adventure</p>
+      </div>
+      <div class="button-group">
+        <button class="glow-btn" onclick="startGame()">Start Game</button>
+        <button class="glow-btn" onclick="openSettings()">Settings</button>
+        <button class="glow-btn" onclick="goBackWebsite()">Exit</button>
+      </div>
+    </div>
+    
+    <!-- Settings Modal -->
+    <div id="settings-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeSettings()">&times;</span>
+        <h2>Game Settings</h2>
+        <div class="controls-info">
+          <h3>Controls</h3>
+          <p>Move: A & D</p>
+          <p>Jump: Space or W</p>
+          <p>Shift Shape: 1 - Square, 2 - Cirlce, 3 - Triangle, 4 - Pentagon, 5 - Star</p>
+        </div>
+        <button id="mute-btn" class="glow-btn" onclick="toggleMute()">🔊 Mute Audio</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Audio Element -->
+  <audio id="bg-music" loop>
+    <source src="bg-music.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    // Initialize particles.js
+    document.addEventListener('DOMContentLoaded', function() {
+      particlesJS('particles-js', {
+        particles: {
+          number: { value: 80, density: { enable: true, value_area: 800 } },
+          color: { value: "#6C5CE7" },
+          shape: { type: ["circle", "triangle", "polygon"], polygon: { nb_sides: 6 } },
+          opacity: { value: 0.5, random: true },
+          size: { value: 3, random: true },
+          line_linked: { enable: true, distance: 150, color: "#6C5CE7", opacity: 0.4, width: 1 },
+          move: { enable: true, speed: 3, direction: "none", random: true, straight: false, out_mode: "out" }
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: { enable: true, mode: "repulse" },
+            onclick: { enable: true, mode: "push" }
+          }
+        }
+      });
+      
+      // Start background music
+      const bgMusic = document.getElementById('bg-music');
+      bgMusic.volume = 0.7;
+      
+      // Try to autoplay music (may not work in all browsers without user interaction)
+      document.body.addEventListener('click', function initAudio() {
+        bgMusic.play().catch(e => console.log("Autoplay prevented:", e));
+        document.body.removeEventListener('click', initAudio);
+      }, { once: true });
+    });
+
+    function toggleMute() {
+      const bgMusic = document.getElementById('bg-music');
+      const muteBtn = document.getElementById('mute-btn');
+      
+      if (bgMusic.muted) {
+        bgMusic.muted = false;
+        muteBtn.textContent = "🔊 Mute Audio";
+      } else {
+        bgMusic.muted = true;
+        muteBtn.textContent = "🔇 Unmute Audio";
+      }
+    }
+
+    function startGame() {
+      window.location.href = "level.html";
+    }
+
+    function openSettings() {
+      document.getElementById('settings-modal').style.display = 'block';
+    }
+
+    function closeSettings() {
+      document.getElementById('settings-modal').style.display = 'none';
+    }
+
+    function goBackWebsite() {
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>
